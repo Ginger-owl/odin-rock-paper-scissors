@@ -1,0 +1,138 @@
+:root {
+    --main-color: #ECFDF5;
+    --second-color: #111827;
+    --choice-color: #F59E0B;
+    --opponent-color: #BE123C;
+    --base-font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: var(--base-font-size);
+    color: var(--second-color);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.start-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--choice-color);
+    color: var(--main-color);
+    z-index: 1;
+    transition: 1s;
+    text-align: center;
+}
+
+.result {
+    font-size: 6em;
+    font-weight: 800;
+    display: none;
+    transition: 1s;
+}
+
+.start-button {
+    font-size: 8em;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.start-button:hover {
+    color: var(--second-color);
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+
+.inner-container {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1vh 1vh 3vh;
+    background: var(--main-color);
+}
+
+.part-name {
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.status {
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.choice {
+    font-size: 7em;
+    font-weight: 800;
+}
+
+#player .choice:hover {
+    color: var(--choice-color);
+    cursor: pointer;
+}
+
+.selected {
+    color: var(--opponent-color);
+}
+
+.winner {
+    background-color: var(--second-color);
+    color: var(--main-color)
+}
+
+@media screen and (max-width: 1080px) {
+    :root {
+        --base-font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    :root {
+        --base-font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --base-font-size: 10px;
+    }
+
+    .container {
+        flex-flow: column-reverse nowrap;
+    }
+
+    .inner-container {
+        width: 100%;
+    }
+}
