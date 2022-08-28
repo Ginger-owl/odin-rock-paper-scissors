@@ -63,13 +63,11 @@ body {
     transition: 1s;
 }
 
-
 .start-button:hover {
     color: var(--second-color);
     transition: 1.5s;
     cursor: pointer;
 }
-
 
 .inner-container {
     width: 50%;
@@ -81,8 +79,6 @@ body {
     padding: 1vh 1vw;
     background: var(--main-color);
 }
-
-
 
 .part-name {
     font-size: 3em;
